@@ -8,7 +8,7 @@
     @import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
 
     body {
-      font-family: 'Potta One', cursive;
+      /* font-family: 'Potta One', cursive; */
       background-color: white;
       margin: 0em;
       max-width: 100rem;
@@ -122,7 +122,7 @@
       height: 100%;
       padding: 0rem;
       margin:0 auto;
-      font-family: 'Imbue', serif;
+      font-family: sans-serif;
       font-size: 2em;
     }
 
@@ -170,12 +170,13 @@
       color: black;
       /* text-align: left; */
       /* font-family: 'Imbue', serif; */
-      font-size: 0.8em;
+      font-size: 0.7em;
+      font-family: sans-serif;
+
     }
 
     .accordion {
       z-index: 10;
-
       display: block;
       color: yellow;
       cursor: pointer;
@@ -210,9 +211,10 @@
       overflow: hidden;
       outline: none;
       text-align:left;
-      background-color: transparent;
-      -webkit-box-shadow: inset 0px 0px 22px 0px #6933FF;
-      box-shadow: inset 0px 0px 22px 0px #6933FF;
+      background-color: #fff;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      z-index:100;
+
     }
 
     .chat-notification {
@@ -260,6 +262,32 @@
       line-height: 1.5;
     }
 
+    .mail-info {
+      display: flex;
+      max-width: 48rem;
+      height: 100%;
+      width: 90%;
+      margin: 1rem auto;
+      margin-top: 0;
+      padding: 0.5rem;
+      border-radius: 1.5rem;
+      background-color: transparent;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+    }
+
+    .mail-small-info {
+      margin-left: 0.5rem;
+      color: black;
+      font-size: 1.2rem;
+    }
+
+    .mail-small-answer {
+      margin-left: 1rem;
+      margin-top: 1.4rem;
+      color: black;
+      font-size: 1.2rem;
+    }
 
   </style>
 </head>
@@ -283,6 +311,10 @@
       <ul>
         <button class="accordion"><h2>Knock. Knock.</h2></button>
         <div class="panel">
+          <div class ="mail-info">
+            <h4 class="mail-small-info">From:<br />Regarding:<br />Date:<br />To:</h4>
+            <p class="mail-small-answer"> future-director@mail.com<br />Knock,knock<br />8 July 2020 at 14:32<br />future-producer@mail.com</p>
+          </div>
           <p>
             <br><br>Dear future production supporters,<br><br>
             Nice to meet you all. I’m very glad to be able to reach out to you, the future producers/funds/grants of this project. I’m Handi Kim who is a future director. There's a high possibility that I have never met you before in real life. Yes.
@@ -317,6 +349,10 @@
         </div>
         <button class="accordion"><h2>Girls Are Everywhere</h2></button>
         <div class="panel">
+          <div class ="mail-info">
+            <h4 class="mail-small-info">From:<br />Regarding:<br />Date:<br />To:</h4>
+            <p class="mail-small-answer"> future-director@mail.com<br />Girls Are Everywhere<br />12 August 2020 at 08:56<br />future-producer@mail.com</p>
+          </div>
           <p>
             <br><br>Hello all,<br><br>
 
