@@ -5,11 +5,13 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Imbue&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
 
     body {
       font-family: 'Potta One', cursive;
       background-color: white;
       margin: 0em;
+      max-width: 100rem;
     }
 
     button {
@@ -20,11 +22,62 @@
       transform: scale(1.01);
     }
 
+    /* .widget1{
+      width: 8rem;
+      height: 6rem;
+      max-width: 80rem;
+      background-color: transparent;
+      background-image:url(img/logo.svg);
+      background-size: contain;
+      position: fixed;
+      bottom: 0.8rem;
+      left: 1rem;
+      border-radius: 3.2rem;
+      z-index: 0;
+      display: inline-block;
+    }
+
+    .widget2{
+      width: 8rem;
+      height: 6rem;
+      max-width: 80rem;
+      background-color: transparent;
+      position: fixed;
+      bottom: 0.8rem;
+      left: 9.1rem;
+      border-radius: 3.2rem;
+      z-index: 0;
+      display: inline-block;
+      background-image:url(img/logo.svg);
+      background-size: contain;
+    } */
+
+    .widget3{
+      width: 100%;
+      height: 5rem;
+      max-width: 100rem;
+      background-color: transparent;
+      position: fixed;
+      bottom: 0rem;
+      left:0rem;
+      border-radius: 0rem;
+      z-index: 0;
+      font-size: 1.4em;
+      font-family: sans-serif;
+      font-style:oblique;
+      text-align: center;
+
+
+    }
+
+
     #myCLICK {
-      max-width: 100em;
+      z-index: 10;
+
+      max-width: 48rem;
       max-height: 100%;
       width: 100%;
-      height: 20em;
+      height: 100%;
       margin: auto;
       padding: 1.5em;
       text-aligh: center;
@@ -32,12 +85,14 @@
       cursor: pointer;
       outline: 0;
       border-radius: 1.2rem;
-      border: none;
+      border: 0;
       box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 
     }
 
     #myINBOX {
+      z-index: 10;
+
       width: 100%;
       padding: 0;
       text-align: center;
@@ -63,7 +118,7 @@
     ul {
       list-style-type: none;
       width: 100%;
-      max-width: 100rem;
+      max-width: 48rem;
       height: 100%;
       padding: 0rem;
       margin:0 auto;
@@ -72,14 +127,16 @@
     }
 
     h1 {
-      font-family: 'Potta One', cursive;
-      font-size: 2em;
+      margin-top: 3rem;
+      font-family: sans-serif;
+      font-size: 1.8em;
       color: black;
       text-align: center;
     }
 
     h2 {
-      font-family: 'Potta One', cursive;
+      font-family: sans-serif;
+      font-style: oblique;
       font-size: 1.2em;
       color: black;
     }
@@ -111,25 +168,29 @@
 
     p {
       color: black;
-      text-align: left;
-      font-family: 'Imbue', serif;
+      /* text-align: left; */
+      /* font-family: 'Imbue', serif; */
       font-size: 0.8em;
     }
 
     .accordion {
+      z-index: 10;
+
       display: block;
       color: yellow;
       cursor: pointer;
       width: 100%;
       /* text-align: center; */
       outline: none;
-      max-width: 100rem;
+      max-width: 48rem;
       margin: 0rem auto;
+      margin-top: 0rem;
       padding: 1rem;
       border-radius: 1.2rem;
       background-color: #fff;
       box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-      border: none;
+      border: 0;
+      z-index: 10;
     }
 
     .active,
@@ -139,30 +200,32 @@
 
     .panel {
       width: 97%;
-      max-width: 100rem;
-      margin: -1rem auto;
+      max-width: 48rem;
+      margin: 0rem auto;
       margin-left: -1rem auto;
       padding: 0.5rem;
-      border-radius: 1.9rem;
+      border-radius: 1.2rem;
       display: none;
       background-color: white;
       overflow: hidden;
       outline: none;
       text-align:left;
-      background-color: #eee;
-
+      background-color: transparent;
+      -webkit-box-shadow: inset 0px 0px 22px 0px #6933FF;
+      box-shadow: inset 0px 0px 22px 0px #6933FF;
     }
 
     .chat-notification {
       /* background: url(img/girl.svg);
   background-size: contain; */
       display: block;
-      max-width: 100rem;
+      max-width: 48rem;
       height: 100%;
-      width: 100%;
+      width: 88%;
       margin: 1rem auto;
+      margin-top: -3em;
       padding: 1.5rem;
-      border-radius: 1.5rem;
+      border-radius: 3.5rem;
       background-color: white;
       box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
     }
@@ -196,6 +259,8 @@
       font-size: 1rem;
       line-height: 1.5;
     }
+
+
   </style>
 </head>
 
@@ -210,9 +275,9 @@
       </div> -->
 
 
-    <h1>Inbox</h1>
+    <h1>Future_Producer@mail.com</h1>
 
-    <button id="myCLICK" onclick="myFunction()">click</button>
+    <button id="myCLICK" onclick="myFunction()">💌 Inbox (9)</button>
 
     <div id="myINBOX" class="wrapper">
       <ul>
@@ -225,7 +290,8 @@
             A piece of my life will be revealed to you, an audience unbeknownst to me, and I would like to ask you to appreciate this story in more universal terms, so that it will be applicable to any of you. By sending this mail, I hope and
             believe a direct bridge between you and me will be built, particularly if we don’t know one another. I dare you to engage with and dedicate a bit of your time and energy to the coming story. And then, maybe, I hope that our interaction
             allows us, the recipients (and maybe even appreciators) of the magical girl genre, to take action and steer the magical girl towards a brighter future.
-            <br><br>
+            <br>
+            <img src="img/1-1.svg" alt="Girl in a jacket" width="100%" height="100%">
             This is the first time that I attempt to suggest my scenario to the public, let me introduce myself properly. As already mentioned above, my name is Handi Kim, the future director. I am from South Korea, currently living in the
             Netherlands. To be honest, I wouldn’t say anything is particularly special about me, except one thing, and it’s all to do with ‘magical girls’. You may have heard of them. I used to be a trainee to become a magical girl for almost 20
             years. You can guess how much I was dedicated to it. Ultimately however, I dropped out, or rather, was kicked out.<br>
@@ -262,7 +328,6 @@
             The very first magical girl anime appeared in 1996 with a show called Sally the Witch(魔法使いサリー). It follows Sally, princess of the magic world Astoria, and shows her episodic journey as she makes friends, uses magic, and tries to understand Earth. From that animation on, the concept of the magical girl was explored further and further until it became its own established genre. “In the worlds of manga and anime, shojo(girls) are everywhere” states Tufts University professor Susan Napier in “Anime from Akira to Princess Mononoke”.
             The image of magic and power on screen then inevitably turned into an actual, real-life goal to be reached for the young girls who grew up watching shows like Sally the Witch. What these new special girl protagonists represented was an enrichment of female ambition and place in society. Girls could now not only dream of being little princesses waiting to be saved by some knight, but also to become powerful in and of themselves, by turning into a real-life magical girl. 
             <br><br>
-            <img src="girl.svg" alt="Girl in a jacket" width="100%" height="100%">
             My daily life was filled with patriarchy and, as anything in society, was governed by heteronormativity (the idea that being heterosexual is the default mode of sexual orientation, asserted through the ever ruling gender binary). I was brought up to believe in common stupidities and gendered stereotypes, among which that “boys like trucks, girls like dolls; boys like blue, girls like pink; boys like sports, girls like makeup; boys are angry, girls are sad; boys are active heroes, girls are passive victims; boys are protagonists of stories, and girls are objects to be saved.” Like the start of every story, my motivation to become a magical girl was triggered by the (unspoken) rules of the society that I belonged to. 
             <br><br>
             I was born a girl, and my name is a girl’s name. Only girls have it. I was taught how to behave like a girl. I was dressed as a girl. The things I was expected to enjoy were girls’ things. I was made to do things in a girly manner. Growing up, there was no doubt in anyone’s mind that I was, in fact, a girl.
@@ -319,29 +384,33 @@
       </ul>
     </div>
 
-    <p><b>Note:</b> Handi's Thesis.</p>
+    <!-- <p><b>Note:</b> Handi's Thesis.</p> -->
   </div>
 
-  <div class="chat-notification">
-    <p><b>Note:</b> Handi's Thesis.</p>
-
-    <button class="accordion"> 11</button>
-    <div class="panel">
-      15
-    </div>
-
-
-  </div>
-  <div class="chat-notification">
+  <!-- <div class="chat-notification">
     <p><b>Note:</b> Handi's Thesis.</p>
 
     <button class="accordion"> 11</button>
     <div class="panel">
       15
-    </div>
+    </div> -->
 
+  <div class="widget1">
 
   </div>
+
+  <div class="widget2">
+
+  </div>
+
+  <div class="widget3">
+<p>
+  Tie your hair up, Point your stick, Make some magic.<br />
+  From Handi Kim (Future_Director@mail.com)
+
+</p>
+  </div>
+
 
 
   <script>
