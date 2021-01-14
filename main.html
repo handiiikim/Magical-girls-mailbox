@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Imbue&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
+
+    body {
+      font-family: 'Potta One', cursive;
+      background-color: white;
+      margin: 0em;
+    }
+
+    button {
+      transition: all .2s ease-in-out;
+    }
+
+    button:hover {
+      transform: scale(1.01);
+    }
+
+    #myCLICK {
+      max-width: 100em;
+      max-height: 100%;
+      width: 100%;
+      height: 20em;
+      margin: auto;
+      padding: 1.5em;
+      text-aligh: center;
+      background-color: white;
+      cursor: pointer;
+      outline: 0;
+      border-radius: 1.2rem;
+      border: none;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+    }
+
+    #myINBOX {
+      width: 100%;
+      padding: 0;
+      text-align: center;
+      background-color: white;
+      margin-top: 1rem;
+      display: none;
+      border-radius: 1.8rem;
+    }
+
+    wrapper {
+      position: relative;
+      transition: 0.4s;
+      -webkit-transition: 2s;
+      text-align: center;
+
+    }
+
+    /* .wrapper:hover, .wrapper.clicked{
+    margin-left:500px;
+    -webkit-transition:1s; // you don't need to specify this again
+ } */
+
+    ul {
+      list-style-type: none;
+      width: 100%;
+      max-width: 80rem;
+      height: 100%;
+      padding: 0.25rem;
+      margin-top: 1rem auto;
+      font-family: 'Imbue', serif;
+      font-size: 1.5em;
+    }
+
+    h1 {
+      font-family: 'Potta One', cursive;
+      font-size: 2em;
+      color: black;
+      text-align: center;
+    }
+
+    h2 {
+      font-family: 'Potta One', cursive;
+      font-size: 1.2em;
+      color: black;
+    }
+
+    /* button {
+  position: relative;
+  width: 100%;
+  max-width: 40rem;
+  height: 1.5rem;
+  display: block;
+  margin:0 auto;
+  padding: 2rem;
+  margin-top: 1.25rem;
+
+} */
+
+    button:nth-child(2n) {
+      background: white;
+    }
+
+    button:nth-child(2n+1) {
+      background: red;
+    }
+
+    button.accordion {
+      background: white;
+      cursor: pointer;
+    }
+
+    p {
+      color: black;
+      text-align: center;
+      font-family: 'Imbue', serif;
+      font-size: 0.8em;
+    }
+
+    .accordion {
+      display: block;
+      color: yellow;
+      cursor: pointer;
+      width: 100%;
+      /* text-align: center; */
+      outline: none;
+      max-width: 100rem;
+      margin: 0rem auto;
+      padding: 1rem;
+      border-radius: 1.2rem;
+      background-color: #fff;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      border: none;
+    }
+
+    .active,
+    .accordion:hover {
+      background-color: #eee;
+    }
+
+    .panel {
+      width: 90%;
+      max-width: 100rem;
+      margin: -1rem auto;
+      margin-left: -1rem auto;
+      padding: 0.5rem;
+      border-radius: 1.9rem;
+      display: none;
+      background-color: white;
+      overflow: hidden;
+      outline: none;
+
+    }
+
+    .chat-notification {
+      /* background: url(img/girl.svg);
+  background-size: contain; */
+      display: block;
+      max-width: 100rem;
+      height: 100%;
+      width: 80%;
+      margin: 1rem auto;
+      padding: 1.5rem;
+      border-radius: 1.5rem;
+      background-color: white;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+
+    .chat-notification-logo-wrapper {
+      flex-shrink: 0;
+      height: 36rem;
+      width: 10rem;
+    }
+
+    /* .chat-notification-logo {
+  padding: 0rem;
+  height: 36rem;
+  width: 10rem;
+} */
+    .chat-notification-content {
+      margin-left: 1rem;
+      padding-top: 1rem;
+      /* text-align: center; */
+
+    }
+
+    .chat-notification-title {
+      color: #1a202c;
+      font-size: 1.25rem;
+      line-height: 1.25;
+    }
+
+    .chat-notification-message {
+      color: #718096;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="chat-notification">
+    <!-- <div class="chat-notification-logo-wrapper">
+      <img class="chat-notification-logo" src="img/girl.svg" alt="ChitChat Logo">
+     </div> -->
+    <!-- <div class="chat-notification-content">
+        <h4 class="chat-notification-title">ChitChat</h4>
+        <p class="chat-notification-message">You have a new message!</p>
+      </div> -->
+
+
+    <h1>Inbox</h1>
+
+    <button id="myCLICK" onclick="myFunction()">click</button>
+
+    <div id="myINBOX" class="wrapper">
+      <ul>
+        <button class="accordion"><h2>Knock. Knock.</h2></button>
+        <div class="panel">
+          <p> Dear future production supporters,
+            Nice to meet you all. I’m very glad to be able to reach out to you, the future producers/funds/grants of this project. I’m Handi Kim who is a future director. There's a high possibility that I have never met you before in real life. Yes.
+            We probably don’t know each other. So it is fair if you were to think “Why me?” But still, I would like to share a very personal story with you. Maybe afterwards, it’ll be clear why.
+            A piece of my life will be revealed to you, an audience unbeknownst to me, and I would like to ask you to appreciate this story in more universal terms, so that it will be applicable to any of you. By sending this mail, I hope and
+            believe a direct bridge between you and me will be built, particularly if we don’t know one another. I dare you to engage with and dedicate a bit of your time and energy to the coming story. And then, maybe, I hope that our interaction
+            allows us, the recipients (and maybe even appreciators) of the magical girl genre, to take action and steer the magical girl towards a brighter future.
+
+            This is the first time that I attempt to suggest my scenario to the public, let me introduce myself properly. As already mentioned above, my name is Handi Kim, the future director. I am from South Korea, currently living in the
+            Netherlands. To be honest, I wouldn’t say anything is particularly special about me, except one thing, and it’s all to do with ‘magical girls’. You may have heard of them. I used to be a trainee to become a magical girl for almost 20
+            years. You can guess how much I was dedicated to it. Ultimately however, I dropped out, or rather, was kicked out.
+            For you, this all could sound a bit surreal. It may be quite bewildering as to why I, a person unbeknownst to you, sent this weirdly specific email out to people unbeknownst to me. Some of you may just simply move this mail to the bin.
+            Some of you may giggle and say, “A trainee for being a magical girl? What is this person talking about?”, and some of you might be very interested and already have some questions.
+
+            I would like to share some images with those of you who are still with me.
+            Look at these images. What do you see? What catches your eye? What do you think about the portrayal of the girls’ characters? How old do you think they are? In short, what impressions do they leave with you?
+
+            Magical girl is the sort of fantasy girl I wished I could have been like for 20 years and the ultimate goal for womanhood I was guided towards as a trainee. When you see these images of magical girls, do you feel maybe that there seems
+            to be something to be concerned about?
+            By sending this mail, I would like to throw a metaphorical pebble at your windows and unpack the rather ugly truths behind a very beautiful story. A story which is told again and again through popular entertainment and therewith got
+            ingrained in the minds of our youngest generations.
+            I would like to tell a story created and sustained by advocates of a patriarchal society, and which has a very specific goal set in place for the women of the future. A goal which may not have their own best interests at heart, and which
+            holds no consideration for who those women really are, but a goal which is nonetheless idealised and presented as an inherent conviction. 
+            Hopefully, this mail makes you feel interested, and lets you decide to jump into more of the mails coming further. I really would love to share my concerns with you about these goals and the means put in place to have them be reached.
+            Please do tell me what you think.
+            I look forward to hearing from you all.
+
+            All the best,
+            Handi Kim
+          </p>
+        </div>
+        <button class="accordion"><h2>Girls Are Everywhere</h2></button>
+        <div class="panel">
+          13
+        </div>
+        <button class="accordion"><h2>An Emerging Spectacle</h2></button>
+        <div class="panel">
+          14
+        </div>
+        <button class="accordion"><h2>Cast A Spell on Your Broomstick.</h2></button>
+        <div class="panel">
+          15
+        </div>
+
+        <button class="accordion"><h2>Your Role Model (to Be)</h2></button>
+        <div class="panel">
+          15
+        </div>
+
+        <button class="accordion"><h2>Spectacular Spectated Spectacle</h2></button>
+        <div class="panel">
+          15
+        </div>
+
+        <button class="accordion"><h2>Girl, Girl, Girl, And Girl</h2></button>
+        <div class="panel">
+          15
+        </div>
+
+        <button class="accordion"><h2>The Flame</h2></button>
+        <div class="panel">
+          15
+        </div>
+
+        <button class="accordion"><h2>Rearrangement and Magic</h2></button>
+        <div class="panel">
+          15
+        </div>
+
+
+      </ul>
+    </div>
+
+    <p><b>Note:</b> Handi's Thesis.</p>
+  </div>
+
+  <div class="chat-notification">
+    <p><b>Note:</b> Handi's Thesis.</p>
+
+    <button class="accordion"> 11</button>
+    <div class="panel">
+      15
+    </div>
+
+
+  </div>
+  <div class="chat-notification">
+    <p><b>Note:</b> Handi's Thesis.</p>
+
+    <button class="accordion"> 11</button>
+    <div class="panel">
+      15
+    </div>
+
+
+  </div>
+
+
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myINBOX");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+  </script>
+
+</body>
+
+</html>
